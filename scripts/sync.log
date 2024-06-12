@@ -1,0 +1,80 @@
+2024-06-12 18:46:34,680 - ERROR - Error during PUSH sync: name 'create_new_connection' is not defined
+2024-06-12 18:48:49,808 - ERROR - Error during PUSH sync: name 'create_new_connection' is not defined
+2024-06-12 19:15:45,395 - ERROR - Error during PUSH sync: name 'get_tables' is not defined
+2024-06-12 19:23:41,968 - ERROR - Error during PUSH sync: name 'get_tables' is not defined
+2024-06-13 00:53:07,029 - ERROR - DatabaseError - 2003 (HY000): Can't connect to MySQL server on '127.0.0.1:3306' (111)
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 327, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on '127.0.0.1:3306' (111)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/dbsyncy_package/database.py", line 48, in create_new_connection
+    connection = mysql.connector.connect(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 144, in __init__
+    self.connect(**kwargs)
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/abstracts.py", line 1360, in connect
+    self._open_connection()
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 332, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on '127.0.0.1:3306' (111)
+
+2024-06-13 00:53:08,636 - ERROR - DatabaseError - 1130 (HY000): Host '198.178.224.156' is not allowed to connect to this MySQL server
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 327, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Host '198.178.224.156' is not allowed to connect to this MySQL server
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/dbsyncy_package/database.py", line 48, in create_new_connection
+    connection = mysql.connector.connect(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 144, in __init__
+    self.connect(**kwargs)
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/abstracts.py", line 1360, in connect
+    self._open_connection()
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 332, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.DatabaseError: 1130 (HY000): Host '198.178.224.156' is not allowed to connect to this MySQL server
+
+2024-06-13 00:55:21,460 - ERROR - DatabaseError - 2003 (HY000): Can't connect to MySQL server on '127.0.0.1:3306' (111)
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 327, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on '127.0.0.1:3306' (111)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/dbsyncy_package/database.py", line 48, in create_new_connection
+    connection = mysql.connector.connect(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 144, in __init__
+    self.connect(**kwargs)
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/abstracts.py", line 1360, in connect
+    self._open_connection()
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/.venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 332, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on '127.0.0.1:3306' (111)
+
+2024-06-13 00:55:51,942 - ERROR - NameError - name 'get_tables' is not defined
+Traceback (most recent call last):
+  File "/home/katana/Projects/python/dbsyncy/pythonProject/dbsyncy_package/sync.py", line 115, in sync_tables
+    src_tables = get_tables(src_connection)
+                 ^^^^^^^^^^
+NameError: name 'get_tables' is not defined. Did you mean: 'sync_tables'?
+
